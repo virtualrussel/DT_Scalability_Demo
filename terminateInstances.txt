@@ -1,0 +1,6 @@
+#!/bin/bash
+ec2_ID_array=(MYARRAY)
+for i in ${ec2_ID_array[@]}
+do
+    aws ec2 terminate-instances --instance-ids $i
+done
